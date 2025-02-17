@@ -81,8 +81,8 @@ const config = {
       navbar: {
         title: 'AWS',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'AWS Logo',
+          src: 'img/aws-logo.png',
         },
         items: [
           {
