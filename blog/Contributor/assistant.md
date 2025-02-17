@@ -1,7 +1,9 @@
 ---
-slug: first-blog-post
-title: First Blog Post
-authors: [slorber, yangshun]
+slug: assistant
+title: Assistant
+# authors: [slorber, yangshun, yoonjin, hyunjoon, juhui, junhu]
+authors: [ yoonjin, hyunjoon, juhui, junhu]
+
 tags: [hola, docusaurus]
 ---
 

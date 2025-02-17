@@ -21,3 +21,71 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+yoonjin:
+  name: Yoonjin Choi
+  title: Cloud Support Intern
+  url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  image_url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  page: true
+  socials:
+    x: yoonjin_choi
+    github: yoonjin-choi
+    linkedin: enjinnierchoi
+
+hyunjoon:
+  name: Hyunjoon Sung
+  title: Cloud Support Intern
+  url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  image_url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  page: true
+  socials:
+    x: yoonjin_choi
+    github: yoonjin-choi
+    linkedin: enjinnierchoi
+
+juhui:
+  name: Juhui Jung
+  title: Cloud Support Intern
+  url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  image_url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  page: true
+  socials:
+    x: yoonjin_choi
+    github: yoonjin-choi
+    linkedin: enjinnierchoi
+
+junhu:
+  name: Junhu Woo
+  title: Cloud Support Intern
+  url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  image_url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  page: true
+  socials:
+    x: yoonjin_choi
+    github: yoonjin-choi
+    linkedin: enjinnierchoi
+
+sumin:
+  name: Sumin Kim
+  title: Cloud Support Associate | Big Data
+  url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  image_url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  page: true
+  socials:
+    x: yoonjin_choi
+    github: yoonjin-choi
+    linkedin: enjinnierchoi
+
+
+minji:
+  name: Minji Kim
+  title: Cloud Support Associate | Networking
+  url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  image_url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  page: true
+  socials:
+    x: yoonjin_choi
+    github: yoonjin-choi
+    linkedin: enjinnierchoi
+
