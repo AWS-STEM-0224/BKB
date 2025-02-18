@@ -204,4 +204,52 @@ c. 데이터를 조회할 수 있는 자연어 쿼리들을 제안합니다.
 예: 가장 높은 연봉은 몇인가요? (What is the max salary?)  
 
 ![u-b-17](../../static/img/u-b-17.png)  
-![u-b-18](../../static/img/u-b-18.png)  
+![u-b-18](../../static/img/u-b-18.png) 
+
+<details>
+<summary>BKB에 Description 추가하기</summary>
+<div markdown="1">
+
+## Bedrock Knowledge Base에 Description 추가하기
+Practice에서 질문한 것처럼 테이블에 대한 추가적인 설명 없이도 BKB가 대답을 잘하는 경우가 있습니다. 하지만, 만약 우리가 만족할 만한 대답을 하지 못한다면 어떻게 해야 할까요? </br>
+우리는 BKB가 테이블에 대해 더 잘 이해할 수 있도록 Description을 추가할 수 있습니다.
+
+a. BKB의 Query Engine을 선택합니다.
+![u-b-19](../../static/img/u-b-19.png) 
+
+b. Edit을 눌러 Description configuration 창을 엽니다.
+![u-b-20](../../static/img/u-b-20.png)
+
+c. 직접 Description을 추가해줍니다. (아래 표를 참고해서 작성해주세요.)
+![u-b-21](../../static/img/u-b-21.png) 
+
+<details>
+<summary>Description Script</summary>
+<div markdown="1">
+
+| Table name         | Column name           | Descriptions                                                                                      |
+|--------------------|-----------------------|---------------------------------------------------------------------------------------------------|
+| awsdatacatalog     | STATUS                | Loan overdue duration: 0: 1-29 days, 1: 30-59 days, 2: 60-89 days, 3: 90-119 days, 4: 120-149 days, 5: Over 150 days, C: paid off that month, X: No loan for the month |
+| awsdatacatalog     | MONTHS_BALANCE        | Record month: The month of the extracted data is the starting point, backwards, 0 is the current month, -1 is the previous month, and so on |
+| awsdatacatalog     | FLAG_OWN_CAR          | Is there a car: 'Y': yes, 'N': no                                                                 |
+| awsdatacatalog     | CODE_GENDER           | Gender: 'M': male, 'F': Female                                                                    |
+| awsdatacatalog     | NAME_FAMILY_STATUS    | Marital status                                                                                    |
+| awsdatacatalog     | DAYS_BIRTH            | Count backwards from current day (0), -1 means yesterday, -365 means 1 year old. (you can get how old is the client by abs(DAYS_BIRTH) / 365) |
+| awsdatacatalog     | FLAG_OWN_REALTY         | Is there a property |
+| awsdatacatalog     | CNT_CHILDREN            | Number of children |
+| awsdatacatalog     | AMT_INCOME_TOTAL            | Annual income |
+| awsdatacatalog     | NAME_INCOME_TYPE            | Income category |
+| awsdatacatalog     | NAME_EDUCATION_TYPE            | Education level |
+| awsdatacatalog     | NAME_HOUSING_TYPE            | Way of living |
+| awsdatacatalog     | FLAG_MOBIL            | Is there a mobile phone |
+| awsdatacatalog     | FLAG_WORK_PHONE            | Is there a work phone |
+| awsdatacatalog     | FLAG_PHONE            | Is there a phone |
+| awsdatacatalog     | FLAG_EMAIL            | Is there an email |
+| awsdatacatalog     | OCCUPATION_TYPE            | Occupation |
+| awsdatacatalog     | CNT_FAM_MEMBERS            | Family size |
+
+</div>
+</details>
+
+</div>
+</details>
