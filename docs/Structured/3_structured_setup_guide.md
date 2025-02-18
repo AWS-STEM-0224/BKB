@@ -68,15 +68,59 @@ b4. `Run crawler`를 실행합니다.
 
 ## 3. [Redshift] Workgroup/Namespace
 
-a. Workgroup과 Namespace를 생성합니다.
+a. Workgroup과 Namespace를 생성합니다.  
 
-## 4. [Knowledge Base] Structured KB
+a1. s3 버킷이 접근 가능한 IAM role을 생성합니다.  
+
+![u31](../../static/img/u-r-1.png)   
+![u32](../../static/img/u-r-2.png)   
+![u33](../../static/img/u-r-3.png)   
+![u34](../../static/img/u-r-4.png)  
+
+다음과 같이 생성이 완료됩니다. 만약 Namespaces/Workgroups에서 안 보이신다면 설정 중이기 때문에 조금 기다린 뒤에 새로고침 해보시면 나타나는 것을 확인해볼 수 있습니다.   
+
+![u35](../../static/img/u-r-5.png)   
+
+
+## 4. [Knowledge Base] Structured KB  
 
 a. Structured Knowledge Base를 생성합니다.
 
+a1. Redshift Default Workgroup을 선택합니다.  
+![u-b-1](../../static/img/u-b-1.png)   
+![u-b-2](../../static/img/u-b-2.png)   
+![u-b-3](../../static/img/u-b-3.png)  
+![u-b-4](../../static/img/u-b-4.png)  
+
+a2. Default storage metadata를 AWS Default Glue Data Catalog로 변경한 뒤, 연결할 Glue catalog table 추가해야 합니다. 이때, 본인의 Glue Data Table을 포함하고 있는 DB 명을 알아보는 방법은 다음과 같습니다.  
+
+![u-b-9](../../static/img/u-b-9.png)
+
+a2-1. Redshift로 돌아가서 Query Data를 선택합니다. 이후, Redshift Query Editor v2에서 `awsdatacatalog` 아래에 위치한 본인의 DB 명을 알아봅니다. 이는 보통 이전에 설정한 Glue DB 명이랑 동일합니다.
+
+![u-b-5](../../static/img/u-b-5.png)  
+![u-b-6](../../static/img/u-b-6.png)  
+![u-b-7](../../static/img/u-b-7.png)  
+![u-b-8](../../static/img/u-b-8.png)  
+
+a3. `Glue catalog tables to connect`에서 `{본인DB}.*`을 작성합니다. 예시의 경우에는 `financedb.*`으로 작성하여, financedb 아래에 있는 모든 테이블들을 연결하겠다는 뜻입니다.
+
+![u-b-10](../../static/img/u-b-10.png)  
+
+a4. Knowledge Base를 생성합니다.  
+
+![u-b-11](../../static/img/u-b-11.png)  
+
+
 ## 5. [IAM] Role Permissions
 
-a. 다음 IAM 권한들을 추가합니다.
+a. IAM 권한들을 추가합니다.  
+
+![u-i-1](../../static/img/u-i-1.png)  
+![u-i-2](../../static/img/u-i-2.png)  
+![u-i-3](../../static/img/u-i-3.png)  
+
+아래 권한들을 Statement에 추가하면 됩니다. 즉, 이미 있는 Sid들 이후에 추가하면 됩니다.
 
 ```yaml
         {
@@ -113,11 +157,14 @@ a. 다음 IAM 권한들을 추가합니다.
         }
 ```
 
+![u-i-4](../../static/img/u-i-4.png)  
+![u-i-5](../../static/img/u-i-5.png)  
+
 
 ## 6. [Redshift Query Editor v2] DB Permissions
 
-a. Redshift Query Editor에서 다음 명령어들을 추가하여 권한을 부여합니다.
-이때, IAMR 위치에 본인의 KnowledgeBase IAMR을 추가하면 됩니다.
+a. Redshift Query Editor v2에서 다음 명령어들을 추가하여 권한을 부여합니다.  
+이때, IAMR 위치에 본인의 KnowledgeBase IAMR을 추가하면 됩니다.  
 
 ```
 CREATE USER "IAMR:AmazonBedrockExecutionRoleForKnowledgeBase_YOURROLENAME" WITH PASSWORD DISABLE;
@@ -125,15 +172,36 @@ CREATE USER "IAMR:AmazonBedrockExecutionRoleForKnowledgeBase_YOURROLENAME" WITH 
 GRANT USAGE ON DATABASE "awsdatacatalog" TO "IAMR:AmazonBedrockExecutionRoleForKnowledgeBase_YOURROLENAME";
 ```
 
+![u-e-1](../../static/img/u-e-1.png)  
+![u-e-2](../../static/img/u-e-2.png)  
+
+
 
 # Practice
 
-위의 설정을 다 완료한 뒤 다음 실습을 진행합니다.
+위의 설정을 다 완료한 뒤 다음 실습을 진행합니다.  
 
 a. Sync 진행합니다.
+![u-p-1](../../static/img/u-p-1.png)  
 
-b. Model을 하나 선택합니다.
 
-c. 데이터를 조회할 수 있는 자연어 쿼리들을 제안합니다.
+b. Anthropic Claude 3 Sonnet을 선택합니다.  
 
-예: 가장 높은 연봉은 몇인가요?
+b1. 이때, 모델 권한이 없을 경우 다음과 같이 신청하면 됩니다.   
+
+![u-b-12](../../static/img/u-b-12.png)  
+![u-b-13](../../static/img/u-b-13.png)  
+![u-b-14](../../static/img/u-b-14.png)  
+![u-b-15](../../static/img/u-b-15.png)  
+
+b2. 이후, 새로고침을 해보시면 Sonnet을 선택할 수 있게 된 것을 확인할 수 있습니다.  
+
+![u-b-16](../../static/img/u-b-16.png)  
+
+
+c. 데이터를 조회할 수 있는 자연어 쿼리들을 제안합니다.  
+
+예: 가장 높은 연봉은 몇인가요? (What is the max salary?)  
+
+![u-b-17](../../static/img/u-b-17.png)  
+![u-b-18](../../static/img/u-b-18.png)  
