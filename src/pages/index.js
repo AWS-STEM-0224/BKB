@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="아마존 베드락 지식기반에 대해 더 자세히 배우고 실습해보는 시간입니다.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
