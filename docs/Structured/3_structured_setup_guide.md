@@ -242,9 +242,3 @@ c. 직접 Description을 추가해줍니다. (아래 표를 참고해서 작성�
 | awsdatacatalog     | FLAG_EMAIL            | Is there an email |
 | awsdatacatalog     | OCCUPATION_TYPE            | Occupation |
 | awsdatacatalog     | CNT_FAM_MEMBERS            | Family size |
-
-</div>
-</details>
-
-</div>
-</details>
