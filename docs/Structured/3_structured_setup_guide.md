@@ -206,13 +206,10 @@ c. 데이터를 조회할 수 있는 자연어 쿼리들을 제안합니다.
 ![u-b-17](../../static/img/u-b-17.png)  
 ![u-b-18](../../static/img/u-b-18.png) 
 
-<details>
-<summary>BKB에 Description 추가하기</summary>
-<div markdown="1">
 
-## Bedrock Knowledge Base에 Description 추가하기
-Practice에서 질문한 것처럼 테이블에 대한 추가적인 설명 없이도 BKB가 대답을 잘하는 경우가 있습니다. 하지만, 만약 우리가 만족할 만한 대답을 하지 못한다면 어떻게 해야 할까요? </br>
-우리는 BKB가 테이블에 대해 더 잘 이해할 수 있도록 Description을 추가할 수 있습니다.
+## 🎁 BONUS: Bedrock Knowledge Base에 Description 추가하기  
+Practice에서 질문한 것처럼 테이블에 대한 추가적인 설명 없이도 BKB가 대답을 잘하는 경우가 있습니다. 하지만, 만약 우리가 만족할 만한 대답을 하지 못한다면 어떻게 해야 할까요? </br>  
+우리는 BKB가 테이블에 대해 더 잘 이해할 수 있도록 Description을 추가할 수 있습니다.  
 
 a. BKB의 Query Engine을 선택합니다.
 ![u-b-19](../../static/img/u-b-19.png) 
@@ -223,9 +220,7 @@ b. Edit을 눌러 Description configuration 창을 엽니다.
 c. 직접 Description을 추가해줍니다. (아래 표를 참고해서 작성해주세요.)
 ![u-b-21](../../static/img/u-b-21.png) 
 
-<details>
-<summary>Description Script</summary>
-<div markdown="1">
+## Description Script
 
 | Table name         | Column name           | Descriptions                                                                                      |
 |--------------------|-----------------------|---------------------------------------------------------------------------------------------------|
