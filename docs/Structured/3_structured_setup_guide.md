@@ -3,7 +3,7 @@
 ## 1. [S3] Upload Dataset
 
 a. S3 버킷을 생성합니다.   
-이때 주의해야 할 점으로는 S3 버킷은 고유 이름이 필요하기 때문에 같은 이름을 사용하실 경우 생성이 안 될 수   도 있습니다. 따라서, 생성이 안 된다면 이름을 다르게 해보시는 걸 추천해 드립니다.  
+이때 주의해야 할 점으로는 S3 버킷은 고유 이름이 필요하기 때문에 같은 이름을 사용하실 경우 생성이 안 될 수도 있습니다. 따라서, 생성이 안 된다면 이름을 다르게 해보시는 걸 추천해 드립니다.  
 ![u1](../../static/img/u-s3-1.png)  
 ![u2](../../static/img/u-s3-2.png)  
 ![u3](../../static/img/u-s3-3.png)  
@@ -12,7 +12,7 @@ a. S3 버킷을 생성합니다.
 b. 제공받은 csv 파일을 업로드합니다.
 ![u4](../../static/img/u-s3-4.png)
 
-b1. `application` 폴더와 `credit` 폴더를 각각 생성해 줍니다. 이는 두개 csv의 스키마 차이를 구분하기 위해서입니다.  
+b1. `application` 폴더와 `credit` 폴더를 각각 생성해 줍니다. 이는 두 개 csv의 스키마 차이를 구분하기 위해서입니다.  
 ![u5](../../static/img/u-s3-5.png)  
 ![u6](../../static/img/u-s3-6.png)  
 ![u7](../../static/img/u-s3-7.png)  
@@ -42,7 +42,7 @@ a2. `financedb` Glue DB를 생성합니다.
 ![u16](../../static/img/u-g-3.png)  
 
 
-b. Glue Crawler을 생성하여 S3 버킷으로부터 데이터를 DB에 테이블로 넣어줍니다.  
+b. Glue Crawler를 생성하여 S3 버킷으로부터 데이터를 DB에 테이블로 넣어줍니다.  
 
 b1. 왼쪽 사이드바에서 `Crawlers`를 선택합니다.  
 ![u17](../../static/img/u-g-4.png)    
@@ -77,7 +77,7 @@ a1. s3 버킷이 접근 가능한 IAM role을 생성합니다.
 ![u33](../../static/img/u-r-3.png)   
 ![u34](../../static/img/u-r-4.png)  
 
-다음과 같이 생성이 완료됩니다. 만약 Namespaces/Workgroups에서 안 보이신다면 설정 중이기 때문에 조금 기다린 뒤에 새로고침 해보시면 나타나는 것을 확인해볼 수 있습니다.   
+다음과 같이 생성이 완료됩니다. 만약 Namespaces/Workgroups에서 안 보이신다면 설정 중이기 때문에 조금 기다린 뒤에 새로고침 해보시면 나타나는 것을 확인해 볼 수 있습니다.   
 
 ![u35](../../static/img/u-r-5.png)   
 
@@ -103,7 +103,7 @@ a2-1. Redshift로 돌아가서 Query Data를 선택합니다. 이후, Redshift Q
 ![u-b-7](../../static/img/u-b-7.png)  
 ![u-b-8](../../static/img/u-b-8.png)  
 
-a3. `Glue catalog tables to connect`에서 `{본인DB}.*`을 작성합니다. 예시의 경우에는 `financedb.*`으로 작성하여, financedb 아래에 있는 모든 테이블들을 연결하겠다는 뜻입니다.
+a3. `Glue catalog tables to connect`에서 `{본인DB}.*`을 작성합니다. 예시의 경우에는 `financedb.*`으로 작성하여, financedb 아래에 있는 모든 테이블을 연결하겠다는 뜻입니다.
 
 ![u-b-10](../../static/img/u-b-10.png)  
 
@@ -218,7 +218,7 @@ a. BKB의 Query Engine을 선택합니다.
 b. Edit을 눌러 Description configuration 창을 엽니다.  
 ![u-b-20](../../static/img/u-b-20.png)  
 
-c. 직접 Description을 추가해줍니다. (아래 표를 참고해서 작성해주세요.)  
+c. 직접 Description을 추가해 줍니다. (아래 표를 참고해서 작성해 주세요.)  
 ![u-b-21](../../static/img/u-b-21.png) 
 
 
