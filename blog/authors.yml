@@ -1,71 +1,3 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    github: yangshun
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
-
-yoonjin:
-  name: Yoonjin Choi
-  title: Cloud Support Intern
-  url: https://media.licdn.com/dms/image/v2/D5603AQFDL54nVQGVVw/profile-displayphoto-shrink_400_400/B56ZPPi4hAHQAk-/0/1734353852144?e=1745452800&v=beta&t=4u2_bZ6Uf1O8ZvyoLZ7ZADywMXkpPXXdSr1PAqjuNvo
-  image_url: https://media.licdn.com/dms/image/v2/D5603AQFDL54nVQGVVw/profile-displayphoto-shrink_400_400/B56ZPPi4hAHQAk-/0/1734353852144?e=1745452800&v=beta&t=4u2_bZ6Uf1O8ZvyoLZ7ZADywMXkpPXXdSr1PAqjuNvo
-  page: true
-  socials:
-    x: sebastienlorber
-    github: sebastienlorber
-    linkedin: enjinnierchoi
-
-hyunjoon:
-  name: Hyunjoon Sung
-  title: Cloud Support Intern
-  url: https://media.licdn.com/dms/image/v2/D5603AQGGi4TMEZ0tdw/profile-displayphoto-shrink_400_400/B56ZQcm9CNHQAg-/0/1735646761898?e=1745452800&v=beta&t=yAPJ4zgbjd-nkN6Q7Z9st9EBWz16ipOLFrqRc_w1sNY
-  image_url: https://media.licdn.com/dms/image/v2/D5603AQGGi4TMEZ0tdw/profile-displayphoto-shrink_400_400/B56ZQcm9CNHQAg-/0/1735646761898?e=1745452800&v=beta&t=yAPJ4zgbjd-nkN6Q7Z9st9EBWz16ipOLFrqRc_w1sNY
-  page: true
-  socials:
-    x: sebastienlorber
-    github: sebastienlorber
-    linkedin: hyunjoon-sung
-
-juhui:
-  name: Juhui Jung
-  title: Cloud Support Intern
-  url: https://media.licdn.com/dms/image/v2/D5603AQEpg2nEKF5rlQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709783527817?e=1745452800&v=beta&t=d6LSy6jtvMfwMH0slKCff0F_mlNin5eLnMwewZ6R-q4
-  image_url: https://media.licdn.com/dms/image/v2/D5603AQEpg2nEKF5rlQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709783527817?e=1745452800&v=beta&t=d6LSy6jtvMfwMH0slKCff0F_mlNin5eLnMwewZ6R-q4
-  page: true
-  socials:
-    x: sebastienlorber
-    github: sebastienlorber
-    linkedin: juhui-jung
-
-junhu:
-  name: Junhu Woo
-  title: Cloud Support Intern
-  url: https://media.licdn.com/dms/image/v2/D4E03AQE6evO7B4tsZg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694555575988?e=1745452800&v=beta&t=2ocPyG_Xkwp53NE5DYeTKOeve_Twk7eHtRCbixz2q5g
-  image_url: https://media.licdn.com/dms/image/v2/D4E03AQE6evO7B4tsZg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694555575988?e=1745452800&v=beta&t=2ocPyG_Xkwp53NE5DYeTKOeve_Twk7eHtRCbixz2q5g
-  page: true
-  socials:
-    x: sebastienlorber
-    github: sebastienlorber
-    linkedin: junhu-woo-3a834a267
-
 sumin:
   name: Sumin Kim
   title: Cloud Support Associate | Big Data
@@ -89,3 +21,46 @@ minji:
     github: sebastienlorber
     linkedin: vitaminmin
 
+yoonjin:
+  name: Yoonjin Choi
+  title: Cloud Support Intern
+  url: https://media.licdn.com/dms/image/v2/D5603AQFDL54nVQGVVw/profile-displayphoto-shrink_400_400/B56ZPPi4hAHQAk-/0/1734353852144?e=1745452800&v=beta&t=4u2_bZ6Uf1O8ZvyoLZ7ZADywMXkpPXXdSr1PAqjuNvo
+  image_url: https://media.licdn.com/dms/image/v2/D5603AQFDL54nVQGVVw/profile-displayphoto-shrink_400_400/B56ZPPi4hAHQAk-/0/1734353852144?e=1745452800&v=beta&t=4u2_bZ6Uf1O8ZvyoLZ7ZADywMXkpPXXdSr1PAqjuNvo
+  page: true
+  socials:
+    x: sebastienlorber
+    github: sebastienlorber
+    linkedin: enjinnierchoi
+
+hyunjoon:
+  name: Hyunjoon Sung
+  title: Cloud Support Intern
+  url: https://media.licdn.com/dms/image/v2/D5603AQGGi4TMEZ0tdw/profile-displayphoto-shrink_400_400/B56ZQcm9CNHQAg-/0/1735646761898?e=1745452800&v=beta&t=yAPJ4zgbjd-nkN6Q7Z9st9EBWz16ipOLFrqRc_w1sNY
+  image_url: https://media.licdn.com/dms/image/v2/D5603AQGGi4TMEZ0tdw/profile-displayphoto-shrink_400_400/B56ZQcm9CNHQAg-/0/1735646761898?e=1745452800&v=beta&t=yAPJ4zgbjd-nkN6Q7Z9st9EBWz16ipOLFrqRc_w1sNY
+  page: true
+  socials:
+    x: sebastienlorber
+    github: sunghj1118
+    linkedin: hyunjoon-sung
+
+juhui:
+  name: Juhui Jung
+  title: Cloud Support Intern
+  url: https://media.licdn.com/dms/image/v2/D5603AQEpg2nEKF5rlQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709783527817?e=1745452800&v=beta&t=d6LSy6jtvMfwMH0slKCff0F_mlNin5eLnMwewZ6R-q4
+  image_url: https://media.licdn.com/dms/image/v2/D5603AQEpg2nEKF5rlQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709783527817?e=1745452800&v=beta&t=d6LSy6jtvMfwMH0slKCff0F_mlNin5eLnMwewZ6R-q4
+  page: true
+  socials:
+    x: sebastienlorber
+    github: sebastienlorber
+    linkedin: juhui-jung
+
+junhu:
+  name: Junhu Woo
+  title: Cloud Support Intern
+  url: https://media.licdn.com/dms/image/v2/D4E03AQE6evO7B4tsZg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694555575988?e=1745452800&v=beta&t=2ocPyG_Xkwp53NE5DYeTKOeve_Twk7eHtRCbixz2q5g
+  image_url: https://media.licdn.com/dms/image/v2/D4E03AQE6evO7B4tsZg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694555575988?e=1745452800&v=beta&t=2ocPyG_Xkwp53NE5DYeTKOeve_Twk7eHtRCbixz2q5g
+  page: true
+  socials:
+    x: sebastienlorber
+    github: sebastienlorber
+    linkedin: junhu-woo-3a834a267
