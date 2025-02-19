@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "Bedrock Knowledge Bases의 Structured Retrieval을 활용하여 자연어 쿼리를 SQL 쿼리로 변환하여 반환해주는 실습에 대한 설명입니다."
   }
 }
