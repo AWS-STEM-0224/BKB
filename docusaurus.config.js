@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/aws-logo.png',
 
   // Set the production url of your site here
-  url: 'https://aws.amazon.com/ko/bedrock/?nc1=h_ls',
+  url: 'https://aws.amazon.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
