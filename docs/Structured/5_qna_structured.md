@@ -1,1 +1,1 @@
-# QnA - BKB Structured Retrieval
+# QnA 
