@@ -6,7 +6,7 @@ sidebar_position: 2
 --- 
 이제 앞서 만든 Knowledge Base를 활용하는 Slack 챗봇을 만들어봅시다.
 
-모든 실습은 us-west-2 (오레곤) 지역에서 진행합니다.
+⚠️ 모든 실습은 us-west-2 (오레곤) 지역에서 진행합니다.
 
 ---
 

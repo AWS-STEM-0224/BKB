@@ -79,7 +79,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'AWS',
+        title: '',
         logo: {
           alt: 'AWS Logo',
           src: 'img/aws-logo.png',
