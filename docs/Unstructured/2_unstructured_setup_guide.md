@@ -9,7 +9,7 @@ sidebar_position: 2
 기존 워크 스페이스를 사용해도 되고 새로 만들어도 됩니다.
 
 OPTIONAL Slack Workspace 새로 만들기
-[Image: Image.jpg][Image: image.png]
+<!-- [Image: Image.jpg][Image: image.png] -->
 
 1. 이메일 입력 후 이메일로 온 코드 입력
 2. 워크 스페이스 이름 입력 > 나의 이름 입력 > 추가 초대 Skip > Start with the Limited Free Version
@@ -19,20 +19,30 @@ OPTIONAL Slack Workspace 새로 만들기
 
 1. https://api.slack.com/ 에 접속하여 로그인한다.
 2. 우측 상단의 Your app 클릭.
-<!-- [Image: image.png]  -->
+![J1](./img/J1.png)
+
 3. “Create New App”을 클릭한다
-<!-- [Image: Image.jpg][Image: Screenshot 2025-02-19 at 4.35.59 PM.png]4.  -->
+![J2](./img/J2.png)
+![J3](./img/J3.png)
+
 “From Scratch”를 클릭한 후 App Name에 내가 원하는 챗봇의 이름을 지정해준다. (나중에 변경 가능)
+![J4](./img/J4.png)
+
 Create App 클릭 
 
 
 #### STEP3 Lambda 함수 생성
 
 AWS 콘솔에서 Lambda https://us-west-2.console.aws.amazon.com/lambda/home?region=us-west-2#/functions 검색 후 함수 생성
+![J5](./img/J5.png)
+
    - 함수 이름: SlackAIResponder
    - 런타임: Python 3.10
    - 아키텍처: x86_64
 함수 생성
+![J6](./img/J6.png)
+
+
 코드 소스에 해당 코드를 붙여넣기
 
 ```
@@ -87,13 +97,22 @@ def lambda_handler(event, context):
 
 이때 본인이 생성한 Bedrock 지식 기반의 ID로 변경 https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/knowledge-bases/knowledge-base-quick-start-c840m/BXDXBAFGAU/1
 
+![J7](./img/J7.png)
 다시 SlackAIResponder 람다 함수로 돌아와서https://us-west-2.console.aws.amazon.com/lambda/home?region=us-west-2#/functions/SlackAIResponder?newFunction=true&tab=configure 구성 > 편집 클립
+![J8](./img/J8.png)
 제한시간을 1분으로 변경 후 저장
+![J9](./img/J9.png)
 다시 구성에서 권한 > 역할 이름의 링크 클릭
+![J10](./img/J10.png)
 권한 추가 > 정책 연결 클릭
+![J11](./img/J11.png)
 AmazonBedrockFullAccess 검색 후 권한 추가
+![J12](./img/J12.png)
 다시 람다함수 생성으로 돌아와서 두번째 람다함수 SlackInitialResponder 생성 https://us-west-2.console.aws.amazon.com/lambda/home?region=us-west-2#/functions
-코스 소스에 해당 코드 붙여넣기
+![J13](./img/J13.png)
+
+코드 소스에 해당 코드 붙여넣기
+
 
 ```
 import json
@@ -163,10 +182,12 @@ def lambda_handler(event, context):
 ```
 
 SlackInitialResponder 람다함수도 동일하게 구성 > 권한 > 역할 이름 링크 클릭
+![J14](./img/J14.png)
 이번에는 권한 추가에서 인라인 정책 생성 클릭
 
 * SlackAIResponder Lambda를 호출하기 위해 필요
 
+![J15](./img/J15.png)
 JSON 클릭후 해당 코드를 붙여넣기
 
 ```
@@ -192,7 +213,7 @@ JSON 클릭후 해당 코드를 붙여넣기
     ]
 }
 ```
-
+<!-- 여기 사진이 비어있음  -->
 '다음' 클릭
 정책 이름 입력: "SlackAIResponderInvoke"
 '정책 생성' 클릭
@@ -200,34 +221,50 @@ JSON 클릭후 해당 코드를 붙여넣기
 #### STEP4 API Gateway 설정하기
 
 AWS console에서 api gateway 접속 후 HTTP API 구축 클릭 [https://us-west-2.console.aws.amazon.com/apigateway/main/apis?region=us-west-2#](https://us-west-2.console.aws.amazon.com/apigateway/main/apis?region=us-west-2)
+![J16](./img/J16.png)
 이름 입력후 (AUSG_API) 나머지 단계 모두 스킵
 경로생성
 
 * 좌측 메뉴의 Routes 클릭 > 방금 만든 API에 대한 경로 생성 클릭
+![J17](./img/J17.png)
 
 POST 방식으로 생성
+![J18](./img/J18.png)
+
 통합 연결 클릭 후 통합 생성 및 연결 클릭
+![J19](./img/J19.png)
+
 통합 유형을 Lambda 함수로 설정 > SlackInitialResponder 함수 선택 > 생성 클릭
+![J20](./img/J20.png)
+
 생성한 API의 기본 엔드포인트를 복사
+![J21](./img/J21.png)
+
 Slack API 페이지로 돌아와서
 권한 설정을 위해 좌측 사이드 메뉴 중 OAuth & Permissions 클릭 
+![J22](./img/J22.png)
 
-[Image: Screenshot 2025-02-19 at 4.35.18 PM.png]
 아래의 Redirect URLs에 복사한 엔드포인트를 붙여넣기 후 저장
+![J23](./img/J23.png)
+
 6. Scopes 섹션에서 Bot Token Scopes의 Add an OAuth Scope 버튼을 누른 후 해당 토큰들을 추가
 
 * commands - 사용할 수 있는 단축키 및/또는 슬래시 명령 추가
 * conversations.connect:read
 * groups:read
 * im:read
-
-
+![J24](./img/J24.png)
 
 같은 페이지의 OAuth Tokens에서 Install to 내 워크플레이스 이름> 클릭 > Allow
+![J25](./img/J25.png)
 
 Slash Commands 클릭 > Create New Command
+![J26](./img/J26.png)
+
 Command : ai를 호출할 명령어 입력
 - Request URL : API Gateway 엔드포인트 입력
 - (Optional) Short Description : 명령어 입력시 뜰 설명 입력
+![J27](./img/J27.png)
+
 
 
