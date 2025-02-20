@@ -73,8 +73,8 @@ def lambda_handler(event, context):
             retrieveAndGenerateConfiguration={
                 'type': 'KNOWLEDGE_BASE',
                 'knowledgeBaseConfiguration': {
-                    'knowledgeBaseId': '**ABCDEF1G2**', # 본인의 KnowledgeBase Id 로 변경
-                    'modelArn': 'arn:aws:bedrock:**us-west-2**::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0'
+                    'knowledgeBaseId': 'ABCDEF1G2', # 본인의 KnowledgeBase Id 로 변경
+                    'modelArn': 'arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0'
                 }                               
             }
         )
@@ -103,7 +103,8 @@ def lambda_handler(event, context):
 
 ```
 
-⚠️ **중요!** 코드 내의 knowledgeBaseId를 본인이 생성한 [Bedrock 지식 기반](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/knowledge-bases)의 ID로 변경해주어야 합니다.
+⚠️ **중요!** 코드 내의 knowledgeBaseId를 본인이 생성한 [Bedrock 지식 기반](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/knowledge-bases)의 ID로 변경해주어야 합니다. <br/>
+(수정 이후 '# 본인의 KnowledgeBase Id 로 변경'문구도 제거해주세요)
 
 ![J7](./img/J7.png)
 
@@ -181,7 +182,7 @@ def lambda_handler(event, context):
 
         # SlackAIResponder 호출
         lambda_client.invoke(
-            FunctionName='**SlackAIResponder**', # 본인이 설정한 Lambda Function 이름으로 변경
+            FunctionName='SlackAIResponder',
             InvocationType='Event',
             Payload=json.dumps(payload)
         )
