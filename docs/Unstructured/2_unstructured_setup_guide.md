@@ -219,8 +219,7 @@ def lambda_handler(event, context):
 이번에는 **권한 추가 > 인라인 정책 생성**을 클릭합니다. 이는 SlackAIResponder Lambda를 호출하기 위해 필요한 권한입니다.
 ![J15](./img/J15.png)
 
-권한 지정에서 JSON을 클릭한 후 아래 코드를 붙여넣어줍니다:
-![J28](./img/J28.png)
+권한 지정에서 JSON을 클릭한 후 아래 코드를 붙여넣고 **다음**을 클릭해줍니다:
 ```
 {
     "Version": "2012-10-17",
@@ -244,9 +243,9 @@ def lambda_handler(event, context):
     ]
 }
 ```
-
-같은 페이지에서 **다음**을 클릭한 후, 정책 이름을 "**SlackAIResponderInvoke**"로 입력하고 **정책 생성**을 클릭합니다.
-
+![J28](./img/J28.png)
+정책 이름을 "**SlackAIResponderInvoke**"로 입력하고 **정책 생성**을 클릭합니다.
+<!-- 사진 추가 요망 -->
 
 ### STEP4 API Gateway 설정하기 🌉
 이제 Slack과 Lambda 함수를 연결하는 다리 역할인 API Gateway를 설정해봅시다.
@@ -270,6 +269,7 @@ API 이름을 입력하고(예: AUSG_API) 나머지 단계는 모두 기본값�
 생성한 POST 경로를 클릭합니다. 
 다음으로 **통합 연결** 클릭한 후 **통합 생성 및 연결**을 선택합니다.
 ![J19](./img/J19.png)
+<!-- 사진추가요망 -->
 
 통합 유형을 **Lambda 함수**로 설정 >앞서 만든 **SlackInitialResponder 함수 선택** > **생성** 을 클릭 해줍니다.
 ![J20](./img/J20.png)
