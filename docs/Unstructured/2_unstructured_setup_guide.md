@@ -60,7 +60,7 @@ import urllib3
 
 # 초기화
 http = urllib3.PoolManager()
-bedrock_client = boto3.client('bedrock-agent-runtime', region_name='**us-west-2**') # 본인이 환경을 구성한 Region으로 변경
+bedrock_client = boto3.client('bedrock-agent-runtime', region_name='us-west-2') 
 
 def lambda_handler(event, context):
     try:
