@@ -38,6 +38,7 @@ Create App을 클릭합니다.
 
 
 💡 **Tip**: 이렇게 생성한 Slack 앱 페이지는 STEP5에서 다시 쓰이기 때문에, 창을 닫지 않는 것을 권장드립니다!
+
 ### STEP3 Lambda 함수 생성하기 🧠
 이제 챗봇의 두뇌 역할을 할 Lambda 함수들을 만들어봅시다.
 
@@ -253,7 +254,10 @@ def lambda_handler(event, context):
 AWS console에서 [API Gateway 콘솔](https://us-west-2.console.aws.amazon.com/apigateway/main/apis?region=us-west-2#)에 접속한 후 'HTTP API 구축'을 클릭합니다.
 ![J16](./img/J16.png)
 API 이름을 입력하고(예: AUSG_API) 나머지 단계는 모두 기본값으로 둔 채 다음으로 넘어갑니다.<br/>
+
 마지막으로 검토 후, 생성 버튼을 클릭해줍니다.
+![J30](./img/J30.png)
+
 
 #### 4.1 API 경로 설정하기 🛣️
 이제 API에 대한 경로를 생성해봅시다. 좌측 메뉴의 'Routes'를 클릭 > 방금 만든 API에 대한 경로 생성을 클릭합니다.
