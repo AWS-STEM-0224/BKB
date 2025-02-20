@@ -37,6 +37,7 @@ Create App을 클릭합니다.
 ![J4](./img/J4.png)
 
 
+💡 **Tip**: 이렇게 생성한 Slack 앱 페이지는 STEP5에서 다시 쓰이기 때문에, 창을 닫지 않는 것을 권장드립니다!
 ### STEP3 Lambda 함수 생성하기 🧠
 이제 챗봇의 두뇌 역할을 할 Lambda 함수들을 만들어봅시다.
 
@@ -107,6 +108,9 @@ def lambda_handler(event, context):
 (수정 이후 '# 본인의 KnowledgeBase Id 로 변경'문구도 제거해주세요)
 
 ![J7](./img/J7.png)
+
+작성 이후 좌측의 **Deploy** 버튼을 클릭하여 함수를 업데이트 해주세요.
+![J29](./img/J29.png)
 
 #### 3.3 함수 설정 조정하기 ⚙️
 다시 [SlackAIResponder 람다 함수](https://us-west-2.console.aws.amazon.com/lambda/home?region=us-west-2#/functions)로 돌아와서 **구성 > 편집**을 클릭해줍니다.
@@ -211,11 +215,11 @@ def lambda_handler(event, context):
 이제 SlackInitialResponder에도 필요한 권한을 설정해줘야 합니다. SlackInitialResponder 람다함수도 동일하게 **구성 > 권한 > 역할 이름 링크**를 클릭합니다.
 ![J14](./img/J14.png)
 
-이번에는 **인라인 정책 생성**을 클릭합니다. 이는 SlackAIResponder Lambda를 호출하기 위해 필요한 권한입니다.
+이번에는 **권한 추가 > 인라인 정책 생성**을 클릭합니다. 이는 SlackAIResponder Lambda를 호출하기 위해 필요한 권한입니다.
 ![J15](./img/J15.png)
 
-JSON을 클릭한 후 다음 코드를 붙여넣어줍니다:
-
+권한 지정에서 JSON을 클릭한 후 아래 코드를 붙여넣어줍니다:
+![J28](./img/J28.png)
 ```
 {
     "Version": "2012-10-17",
@@ -239,8 +243,8 @@ JSON을 클릭한 후 다음 코드를 붙여넣어줍니다:
     ]
 }
 ```
-![J28](./img/J28.png)
-'다음'을 클릭한 후, 정책 이름을 "SlackAIResponderInvoke"로 입력하고 '정책 생성'을 클릭합니다.
+
+같은 페이지에서 **다음**을 클릭한 후, 정책 이름을 "**SlackAIResponderInvoke**"로 입력하고 **정책 생성**을 클릭합니다.
 
 
 ### STEP4 API Gateway 설정하기 🌉
@@ -248,7 +252,8 @@ JSON을 클릭한 후 다음 코드를 붙여넣어줍니다:
 
 AWS console에서 [API Gateway 콘솔](https://us-west-2.console.aws.amazon.com/apigateway/main/apis?region=us-west-2#)에 접속한 후 'HTTP API 구축'을 클릭합니다.
 ![J16](./img/J16.png)
-API 이름을 입력하고(예: AUSG_API) 나머지 단계는 모두 기본값으로 둔 채 다음으로 넘어갑니다.
+API 이름을 입력하고(예: AUSG_API) 나머지 단계는 모두 기본값으로 둔 채 다음으로 넘어갑니다.<br/>
+마지막으로 검토 후, 생성 버튼을 클릭해줍니다.
 
 #### 4.1 API 경로 설정하기 🛣️
 이제 API에 대한 경로를 생성해봅시다. 좌측 메뉴의 'Routes'를 클릭 > 방금 만든 API에 대한 경로 생성을 클릭합니다.
@@ -258,10 +263,11 @@ API 이름을 입력하고(예: AUSG_API) 나머지 단계는 모두 기본값�
 ![J18](./img/J18.png)
 
 #### 4.2 Lambda 함수 연결하기 🔗
-**통합 연결** 클릭한 후 '통합 생성 및 연결'을 선택합니다.
+생성한 POST 경로를 클릭합니다. 
+다음으로 **통합 연결** 클릭한 후 **통합 생성 및 연결**을 선택합니다.
 ![J19](./img/J19.png)
 
-통합 유형을 Lambda 함수로 **설정 >앞서 만든 SlackInitialResponder 함수 선택 > 생성** 을 클릭 해줍니다.
+통합 유형을 **Lambda 함수**로 설정 >앞서 만든 **SlackInitialResponder 함수 선택** > **생성** 을 클릭 해줍니다.
 ![J20](./img/J20.png)
 
 **🔑 생성이 완료되면 API의 기본 엔드포인트를 복사해둡니다.** 이는 Slack 앱 설정에서 사용할 예정입니다.
@@ -274,21 +280,23 @@ API 이름을 입력하고(예: AUSG_API) 나머지 단계는 모두 기본값�
 좌측 사이드 메뉴에서 **OAuth & Permissions**를 클릭합니다.
 ![J22](./img/J22.png)
 
-📍 아래의 Redirect URLs 섹션에서 앞서 복사한 API Gateway 엔드포인트를 붙여넣고 저장합니다.
+📍 스크롤을 내려 아래의 Redirect URLs 섹션에서 앞서 복사한 API Gateway 엔드포인트를 붙여넣고 저장합니다.
 ![J23](./img/J23.png)
 
 #### 5.2 봇 권한 추가하기 🤖
 이제 봇이 필요로 하는 권한들을 추가해봅시다. 
 
 Scopes 섹션에서 **Bot Token Scopes**의 **Add an OAuth Scope** 버튼을 클릭하여 다음 권한들을 추가합니다:
-* commands - 사용할 수 있는 단축키 및/또는 슬래시 명령 추가
-* conversations.connect:read
-* groups:read
-* im:read
+* `commands` - 사용할 수 있는 단축키 또는 슬래시 명령 추가
+* `conversations.connect:read`
+* `groups:read`
+* `im:read`
+
 ![J24](./img/J24.png)
 
 #### 5.3 워크스페이스에 앱 설치하기 📲
-같은 페이지의 OAuth Tokens에서 **Install to 내 워크플레이스 이름** > Allow 선택하여 앱을 워크스페이스에 설치합니다.
+다시 스크롤을 올려 같은 페이지의 OAuth Tokens에서 '**Install to 내 워크플레이스 이름**' 을 클릭합니다.<br/>
+리다이렉션된 페이지에서 **Allow** 버튼을 선택하여 앱을 워크스페이스에 설치합니다.
 ![J25](./img/J25.png)
 
 ### STEP6 슬래시 명령어 설정하기 ⚡
