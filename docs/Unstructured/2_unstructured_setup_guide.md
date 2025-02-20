@@ -27,7 +27,7 @@ OPTIONAL:Slack Workspace 새로 만들기
 Slack API 사이트(https://api.slack.com/) 에 로그인한 후, 우측 상단의 "Your Apps"를 클릭합니다.
 ![J1](./img/J1.png)
 
-3. “Create New App”을 클릭합니다.
+“Create New App”을 클릭합니다.
 ![J2](./img/J2.png)
 
 "From Scratch"를 선택한 후, App Name에 챗봇의 이름을 지정해줍니다. (나중에 변경 가능합니다)
