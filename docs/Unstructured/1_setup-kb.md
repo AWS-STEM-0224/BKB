@@ -52,15 +52,15 @@ KnowledgeBase를 생성하고 사용하기 위해선 우리가 사용할 AI모�
 (모델 확정 후 스크린샷 추가 예정)
 
 이번 세션에서는 
-- Titan Text Embeddings V2 
-- Claude 3.5 Sonnet v1
+- 🤖 Titan Text Embeddings V2 
+- 🤖 Claude 3.5 Sonnet v1
 
 가 필요합니다.
 
 이제 **다음 > 제출** 버튼을 눌러 액세스를 받을때까지 잠시 기다려주면 액세스가 부여됩니다.
 
 
-### Step 2.2 Knowledge Base 생성하기
+### Step 2.2 Knowledge Base 생성하기 📚
 좌측 메뉴에서 "지식 기반" 또는 [여기](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/knowledge-bases)를 클릭한 뒤 
 
 **지식 기반 생성 > Knowledge Base with vectore store** 를 클릭합니다.
