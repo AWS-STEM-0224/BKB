@@ -6,7 +6,7 @@ sidebar_position: 1
 ---
 먼저, 슬랙봇에서 사용할 Knowledge Base를 생성해봅시다.
 
-모든 실습은 us-west-2 (오레곤) 지역에서 합니다.
+모든 실습은 us-west-2 (오레곤) 지역에서 진행합니다.
 
 ---
 
