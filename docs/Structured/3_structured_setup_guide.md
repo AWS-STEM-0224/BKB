@@ -184,7 +184,7 @@ a. **Structured Knowledge Base를 생성합니다.**
 
 ![u-b-2](../../static/img/u-b-2.png)   
 
-a1. Redshift Default Workgroup을 선택합니다.   
+a1. **Redshift Default Workgroup을 선택합니다.**   
 
 - `Step 1`에서는 변경해야 할 사항이 없는 관계로, `Next`를 클릭합니다.  
 
