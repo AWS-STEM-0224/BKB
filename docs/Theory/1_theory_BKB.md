@@ -1,4 +1,4 @@
-# Bedrock Knowledge Bases
+# Bedrock Knowledge Bases (BKB)
 
 대규모 언어 모델(LLM)은 방대한 텍스트 데이터로 학습된 인공지능 모델로, 텍스트 생성, 번역, 요약 등 다양한 자연어 처리 작업에서 놀라운 성능을 보여주며 큰 주목을 받았습니다. 
 
@@ -8,7 +8,7 @@
 
 RAG를 효과적으로 구현하기 위해서는 문서를 적절한 크기로 나누고 효과적인 임베딩 방식을 선택하는 등의 문서 처리 과정이 중요합니다. 또한 검색의 정확도를 높이고 속도와 비용을 최적화하는 것도 필수적인 요소 중 하나입니다. 이러한 배경에서 Amazon Bedrock Knowledge Base가 개발되었으며, 이는 AWS 환경에서 기존에 저장된 데이터를 기반으로 RAG를 더욱 효율적이고 사용하기 쉽게 구현할 수 있도록 지원합니다. 기존 LLM의 강력한 언어 이해 및 생성 능력과 RAG의 장점을 결합하여, 더욱 신뢰성 있고 실용적인 AI 서비스를 제공할 수 있게 되었습니다.
 
-## Knowledge Base
+## Knowledge Base (지식 기반)
 
 기본적으로 Amazon Bedrock에서 제공하는 Foundation 모델은 일반적인 지식을 보유하고 있지만, 앞서 살펴봤듯이 RAG(Retrieval Augmented Generation) 기술을 활용하면 응답의 품질을 한층 더 개선할 수 있습니다. Amazon Bedrock에서는 Knowledge Base 기능을 통해 사용자가 가지고 있는 정보를 생성형 AI 애플리케이션에 통합하고, 쿼리에 대한 관련 정보를 검색하여 더 정확한 응답을 생성할 수 있습니다.
 
