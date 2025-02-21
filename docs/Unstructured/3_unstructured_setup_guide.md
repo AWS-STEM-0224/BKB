@@ -10,7 +10,7 @@ sidebar_position: 2
 
 ---
 
-### STEP1 Slack Workspace 생성하기 🏢
+### Step 1: Slack Workspace 생성하기 🏢
 먼저, 우리가 만들 슬랙봇이 동작할 워크스페이스를 준비해봅시다.
 기존 워크스페이스를 사용하셔도 되고, 새로 생성하셔도 됩니다.
 (기존 워크스페이스를 사용한다면, STEP2로 바로 이동해주세요!⏩)
@@ -21,7 +21,7 @@ OPTIONAL:Slack Workspace 새로 만들기
 1. 이메일 입력 후 이메일로 온 코드 입력
 2. 워크 스페이스 이름 입력 > 나의 이름 입력 > 추가 초대 Skip > Start with the Limited Free Version
 
-### STEP2 Slack 앱 생성 및 권한 설정하기 🛠️
+### Step 2: Slack 앱 생성 및 권한 설정하기 🛠️
 이제 워크스페이스에 설치될 Slack 앱을 만들어봅시다.
 
 Slack API 사이트(https://api.slack.com/) 에 로그인한 후, 우측 상단의 "Your Apps"를 클릭합니다.
@@ -39,7 +39,7 @@ Create App을 클릭합니다.
 
 💡 **Tip**: 이렇게 생성한 Slack 앱 페이지는 STEP5에서 다시 쓰이기 때문에, 창을 닫지 않는 것을 권장드립니다!
 
-### STEP3 Lambda 함수 생성하기 🧠
+### Step 3: Lambda 함수 생성하기 🧠
 이제 챗봇의 두뇌 역할을 할 Lambda 함수들을 만들어봅시다.
 
 #### 3.1 첫 번째 Lambda 함수 (SlackAIResponder) 생성 🤖
@@ -247,7 +247,7 @@ def lambda_handler(event, context):
 정책 이름을 "**SlackAIResponderInvoke**"로 입력하고 **정책 생성**을 클릭합니다.
 <!-- 사진 추가 요망 -->
 
-### STEP4 API Gateway 설정하기 🌉
+### Step 4: API Gateway 설정하기 🌉
 이제 Slack과 Lambda 함수를 연결하는 다리 역할인 API Gateway를 설정해봅시다.
 
 AWS console에서 [API Gateway 콘솔](https://us-west-2.console.aws.amazon.com/apigateway/main/apis?region=us-west-2#)에 접속한 후 'HTTP API 구축'을 클릭합니다.
@@ -277,7 +277,7 @@ API 이름을 입력하고(예: AUSG_API) 나머지 단계는 모두 기본값�
 **🔑 생성이 완료되면 API의 기본 엔드포인트를 복사해둡니다.** 이는 Slack 앱 설정에서 사용할 예정입니다.
 ![J21](./img/J21.png)
 
-### STEP5 Slack 앱 설정 마무리하기 🎨
+### Step 5: Slack 앱 설정 마무리하기 🎨
 다시 Slack API 페이지로 돌아와서 앱의 권한을 설정해봅시다.
 
 #### 5.1 권한 설정하기 🔐
@@ -303,7 +303,7 @@ Scopes 섹션에서 **Bot Token Scopes**의 **Add an OAuth Scope** 버튼을 클
 리다이렉션된 페이지에서 **Allow** 버튼을 선택하여 앱을 워크스페이스에 설치합니다.
 ![J25](./img/J25.png)
 
-### STEP6 슬래시 명령어 설정하기 ⚡
+### Step 6: 슬래시 명령어 설정하기 ⚡
 마지막으로, 챗봇을 호출할 슬래시 명령어를 설정해봅시다.
 
 Slash Commands 클릭 > Create New Command 를 선택합니다.
