@@ -6,14 +6,19 @@ Bedrock Knowledge Bases with Structured Retrieval 실습에서는 정형 데이�
 ![architecture](img/structured-architecture.png)
 
 ### 실습 가이드 영상
+
+실습 내용을 확인하실 수 있는 가이드 영상입니다. 참고 부탁드립니다.
+
 [AWS Bedrock Knowledge Bases with Structured Retrieval Practice](https://www.youtube.com/watch?v=C8lKtQVM47k)
 
-### 데이터셋 파일
 
-실습에서 활용될 CSV 파일들입니다. 다운로드 받아주시길 바랍니다.  
 
-[**application.csv**](data/application.csv)   
-[**credit.csv**](data/credit.csv)  
+### 실습 데이터
+
+실습에서 활용될 CSV 파일입니다. 링크를 클릭하여 다운로드해주시길 바랍니다.
+
+[**application.csv**](data/application.csv)
+[**credit.csv**](data/credit.csv)
 
 
 
