@@ -16,10 +16,26 @@ sidebar_position: 2
 (기존 워크스페이스를 사용한다면, STEP2로 바로 이동해주세요!⏩)
 
 OPTIONAL:Slack Workspace 새로 만들기
-<!-- [Image: Image.jpg][Image: image.png] -->
+슬랙 좌측의 기존 워크스페이스 로고를 클릭한 후 Add a workspace를 클릭합니다.
+![J32](./img/J32.png)
 
-1. 이메일 입력 후 이메일로 온 코드 입력
-2. 워크 스페이스 이름 입력 > 나의 이름 입력 > 추가 초대 Skip > Start with the Limited Free Version
+Create a new workspace를 클릭합니다.
+![J33](./img/J33.png)
+
+리다이렉트 된 웹사이트에서 나의 이메일 계정을 입력한 후 메일로 온 인증코드를 입력해준 뒤
+새로 생성할 워크스페이스의 이름을 입력해줍니다.
+![J34](./img/J34.png)
+
+나의 활동명을 입력하고 Next를 클릭해줍니다.
+![J35](./img/J35.png)
+
+워크 스페이스에 추가할 인원은 테스트할때는 필요하지 않으니 Skip this step을 눌러 넘겨주세요
+![J36](./img/J36.png)
+![J37](./img/J37.png)
+
+Start with the Limited Free Version을 눌러 생성을 마무리해주세요.
+![J38](./img/J38.png)
+
 
 ### Step 2: Slack 앱 생성 및 권한 설정하기 🛠️
 이제 워크스페이스에 설치될 Slack 앱을 만들어봅시다.
