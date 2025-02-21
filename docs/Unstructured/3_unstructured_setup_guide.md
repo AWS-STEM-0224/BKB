@@ -260,8 +260,9 @@ def lambda_handler(event, context):
 }
 ```
 ![J28](./img/J28.png)
+
 정책 이름을 "**SlackAIResponderInvoke**"로 입력하고 **정책 생성**을 클릭합니다.
-<!-- 사진 추가 요망 -->
+![J39](./img/J39.png)
 
 ### Step 4: API Gateway 설정하기 🌉
 이제 Slack과 Lambda 함수를 연결하는 다리 역할인 API Gateway를 설정해봅시다.
