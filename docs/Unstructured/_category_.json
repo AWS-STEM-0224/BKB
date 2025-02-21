@@ -3,6 +3,6 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "d #s"
+    "description": "Bedrock Knowledge Bases와 Slack을 연동하여 비정형 데이터를 조회한 뒤 이를 기반으로 답변을 반환해줍니다."
   }
 }
