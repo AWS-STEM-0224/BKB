@@ -83,7 +83,7 @@ a1. AWS Glue를 검색해서 콘솔에 접속한 뒤, 왼쪽 사이드바에 `Da
 ![u15](img/u-g-1.png)  
 
 a2. `financedb` Glue DB를 생성합니다.  
-🔥 **`이후 단계에서 DB 이름이 활용될 예정이니 따로 복사해주세요`**. 🔥 
+🔥 **`이후 단계에서 DB 이름이 활용될 예정이니 따로 복사해주세요!`**. 🔥 
 
 ![u16](img/u-g-3.png)  
 
@@ -220,7 +220,7 @@ a2-1. Redshift로 돌아가서 Query Data를 선택합니다. 이후, Redshift Q
 
 a3. **`Glue catalog tables to connect`에서 `{본인DB}.*`을 작성합니다. 예시의 경우에는 `financedb.*`으로 작성하여, financedb 아래에 있는 모든 테이블을 연결하겠다는 뜻입니다.**  
 
-🔥 본인DB에 이전 단계에서 복사해둔 Glue DB를 붙여넣기하시는 것을 권장드립니다.
+🔥 **`본인DB에 이전 단계에서 복사해둔 Glue DB를 붙여넣기 해주세요!`** 🔥  
 
 ![u-b-10](img/u-b-10.png)  
 
@@ -235,7 +235,7 @@ a. **IAM 권한들을 추가합니다.**
 
 - 생성하신 Bedrock Knowledge Base의 `Service Role`을 클릭합니다.  
   
-🔥 이후 권한 부여 단계에서 `Service Role Name`을 사용하기 때문에 따로 복사하시는 것을 권장드립니다.  
+🔥 **`이후 권한 부여 단계에서 Service Role Name을 사용하기 때문에 따로 복사해주세요!`**  🔥  
 
 ![u-i-1](img/u-i-1.png)  
 
@@ -303,7 +303,7 @@ a. **IAM 권한들을 추가합니다.**
 a. **Redshift Query Editor v2에서 다음 명령어들을 추가하여 권한을 부여합니다.**  
 **이때, IAMR 위치에 본인의 KnowledgeBase IAMR을 추가하면 됩니다.**  
 
-🔥 이전 BKB 생성 단계에서 복사해둔 IAMR를 붙여넣기하시는 것을 권장드립니다.  
+🔥 **`이전 BKB 생성 단계에서 복사해둔 Service Role Name (IAMR)를 붙여넣기 해주세요!`** 🔥  
 
 ```
 CREATE USER "IAMR:AmazonBedrockExecutionRoleForKnowledgeBase_YOURROLENAME" WITH PASSWORD DISABLE;
