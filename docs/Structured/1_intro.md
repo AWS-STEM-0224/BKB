@@ -26,7 +26,7 @@ Bedrock Knowledge Bases with Structured Retrieval 실습에서는 정형 데이�
 - [**credit.csv**](data/credit.csv)
 
 
-
+---
 
 
 ## 기타 서비스
