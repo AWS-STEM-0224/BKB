@@ -49,11 +49,14 @@ b1. `application` 폴더와 `credit` 폴더를 각각 생성해 줍니다. 이�
 
 b2. `application` 폴더에는 `application.csv` 파일을 업로드합니다.  
 
+- [**application.csv**](data/application.csv)
+- [**credit.csv**](data/credit.csv)
+
 - `application` 폴더를 클릭합니다.  
 
 ![u9](img/u-s3-9.png)
 
-- `Add files`를 클릭합니다.  
+- `Add files` 를 클릭합니다.  
 
 ![u10](img/u-s3-10.png)   
 
