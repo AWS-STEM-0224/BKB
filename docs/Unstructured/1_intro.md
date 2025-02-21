@@ -9,7 +9,7 @@
 
 
 ### 아키텍처
-Bedrock Knowledge Bases를 활용한 Slack Chatbot 만들기 실습에서는 pdf 등의 비정형 데이터를 s3 버킷에 업로드한 뒤, 이를 OpenSearch, API Gateway, Lambda 등을 활용하여 조회합니다. 이후, Bedrock Knowledge Bases를 활용하여 해당 데이터를 참고하여 답변을 반환하며 참고한 자료 또한 첨부합니다. 이를 간단하게 Slack에서 `/ask` 등의 명령어로 구현하여 사용성을 높입니다.
+Bedrock Knowledge Bases를 활용한 Slack Chatbot 만들기 실습에서는 먼저 S3 Bucket에 PDF 등의 비정형 데이터를 저장하고, OpenSearch가 이를 인덱싱하여 검색 가능한 형태로 변환합니다. 사용자가 Slack에서 `/ask` 명령어로 질문을 하면, API Gateway를 통해 Lambda Function들이 이를 받아 처리하는데, SlackInitialResponder함수를 통해 '답변이 생성중이다'라는 메세지를 보내고 SlackAIResponder를 호출하게 됩니다. SlackAIResponder는 프롬프트를 Bedrock Knowledge Bases에 전달하여 s3에 저장된 문서들을 기반으로 자연스러운 답변을 생성합니다. 이 과정에서 RAG(Retrieval-Augmented Generation) 방식을 사용하여 정확한 정보를 제공하며, 답변과 함께 참고한 문서의 출처도 함께 Slack으로 반환하여 사용자에게 전달합니다.
 
 ![architecture](img/AUSG_Architecture_fin2.png)
 
