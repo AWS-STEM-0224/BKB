@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# 실습 ② - Slack 챗봇 만들기 🤖
+# Slack 챗봇 만들기 🤖
 
 --- 
 이제 앞서 만든 Knowledge Base를 활용하는 Slack 챗봇을 만들어봅시다.

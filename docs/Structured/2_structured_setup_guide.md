@@ -1,4 +1,4 @@
-# 실습 ① - BKB Structured Retrieval
+# Structured Retrieval 🗃️
 
 ## 1. [S3] Upload Dataset
 

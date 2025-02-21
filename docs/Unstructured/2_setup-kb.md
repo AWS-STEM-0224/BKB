@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# 실습 ① -Knowledge Base 세팅하기 🚀
+# Knowledge Base 세팅하기 🚀
 
 ---
 먼저, 슬랙봇에서 사용할 Knowledge Base를 생성해봅시다.<br/>
