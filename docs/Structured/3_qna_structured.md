@@ -21,7 +21,7 @@
 
 예시로, `AmazonBedrockExecutionRoleForKnowledgeBase_abcd1`인 IAMR 대신 `AAmazonBedrockExecutionRoleForKnowledgeBase_abcd11` 등이 추가되어 권한 접근이 안되고 있을 가능성도 있습니다.  
 
-이런 가능성을 배제하기 위해서 복사 붙혀놓기를 통해 오타의 가능성을 줄이고 다시 시도해보시는 것을 추천드립니다.
+이런 가능성을 배제하기 위해서 복사 붙여놓기 통해 오타의 가능성을 줄이고 다시 시도해보시는 것을 추천드립니다.
 
 또한, 제공해드린 명령어 **두 개 모두** IAMR을 변경해주셔야 하는 점 유의해주시길 바랍니다.
 
@@ -37,7 +37,7 @@ GRANT USAGE ON DATABASE "awsdatacatalog" TO "IAMR:AmazonBedrockExecutionRoleForK
 
 ### IAM Permission  
 
-또한, IAM 권한을 부여하면서 문제가 생겼을 가능성이 있습니다. 저장이 제대로 안됐을 가능성도 있으며, 특정 권한이 누락 되었을 수도 있습니다. 이 때문에 [**IAM 설정 관련 부분**](https://stem.awskorea.kr/docs/Structured/structured_setup_guide#5-iam-role-permissions)도 다시 한번 확인해보시는걸 추천드립니다.
+또한, IAM 권한을 부여하면서 문제가 생겼을 가능성이 있습니다. 저장이 제대로 되지 않았을 가능성도 있으며, 특정 권한이 누락 되었을 수도 있습니다. 이 때문에 [**IAM 설정 관련 부분**](https://stem.awskorea.kr/docs/Structured/structured_setup_guide#5-iam-role-permissions)도 다시 한번 확인해보시는걸 추천드립니다.
 
 
 특히, 다음 권한들이 모두 있는지 확인해주시길 바랍니다.  
