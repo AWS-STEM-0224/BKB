@@ -4,6 +4,7 @@
 
 a. **S3 버킷을 생성합니다.**   
 
+[AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 S3를 검색하여 클릭하거나 [S3 콘솔](https://us-west-2.console.aws.amazon.com/s3/home?region=us-west-2#)에 직접 접속합니다.
 
 이때 주의해야 할 점으로는 S3 버킷은 고유 이름이 필요하기 때문에 같은 이름을 사용하실 경우 생성이 안 될 수도 있습니다. 따라서, 생성이 안 된다면 이름을 다르게 해보시는 걸 추천해 드립니다.  
 
@@ -80,6 +81,8 @@ b2. `application` 폴더에는 `application.csv` 파일을 업로드합니다.
 
 ## 2. [Glue] Create DB, Crawler
 
+[AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Glue를 검색하여 클릭하거나 [Glue 콘솔](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#/v2/getting-started)에 직접 접속합니다.
+
 a. **Glue Database를 생성합니다.**
 
 a1. AWS Glue를 검색해서 콘솔에 접속한 뒤, 왼쪽 사이드바에 `Databases`를 선택합니다.
@@ -152,6 +155,8 @@ b4. `Run crawler`를 실행합니다.
 
 ## 3. [Redshift] Workgroup/Namespace
 
+[AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Redshift를 검색하여 클릭하거나 [Redshift 콘솔](https://us-west-2.console.aws.amazon.com/redshiftv2/home?region=us-west-2#/landing:)에 직접 접속합니다.
+
 a. **Workgroup과 Namespace를 생성합니다.**  
 
 a1. s3 버킷이 접근 가능한 IAM role을 생성합니다.  
@@ -180,6 +185,8 @@ a1. s3 버킷이 접근 가능한 IAM role을 생성합니다.
 ## 4. [Knowledge Base] Structured KB  
 
 a. **Structured Knowledge Base를 생성합니다.**  
+
+[AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Bedrock를 검색하여 클릭하거나 [Bedrock Knowledge Bases 콘솔](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/knowledge-bases)에 직접 접속합니다.  
 
 - `Amazon Bedrock` 콘솔로 접속한 뒤, 사이드바에 있는 `Knowledge Bases`에 접속합니다.  
 
