@@ -8,6 +8,21 @@ Bedrock Knowledge Bases with Structured Retrieval 실습에서는 정형 데이�
 ### 실습 가이드 영상
 [AWS Bedrock Knowledge Bases with Structured Retrieval Practice](https://www.youtube.com/watch?v=C8lKtQVM47k)
 
+
+
+### CSV 파일
+
+실습에서 활용될 CSV 파일들입니다. 다운로드 받아주시길 바랍니다.  
+
+[**application.csv**](data/application.csv)   
+[**credit.csv**](data/credit.csv)  
+
+
+
+
+
+## 기타 서비스
+
 ### Amazon S3
 Amazon S3(Simple Storage Service)는 데이터를 저장하고 검색할 수 있는 객체 스토리지 서비스입니다. 업계 최고 수준의 확장성, 데이터 가용성, 보안 및 성능을 제공하며, 모든 규모의 고객이 Amazon S3를 데이터 레이크, 웹사이트, 모바일 애플리케이션, 백업 및 복원, 아카이브, 엔터프라이즈 애플리케이션, IoT 디바이스, 빅데이터 분석 등 다양한 용도로 활용할 수 있습니다.
 
