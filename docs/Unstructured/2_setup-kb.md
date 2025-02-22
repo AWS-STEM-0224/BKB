@@ -38,7 +38,7 @@ sidebar_position: 1
 
 
 
-### Step 2: Bedrock Knowledge Base 생성하기 🧠
+### Step 2: Bedrock 생성하기 🧠
 이제 Amazon Bedrock에 S3에 저장된 데이터를 연동할 Knowledge Base를 설정해봅시다.
 
 [AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Bedrock를 검색하여 클릭하거나 [Bedrock 콘솔](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/)에 직접 접속합니다.
@@ -105,7 +105,7 @@ STEP1에서 만든 S3를 연결하고, 데이터를 분석할 parser를 AI 모�
 ⏳ OpenSearch 연동과 데이터베이스 생성에는 시간이 좀 걸립니다. 조금만 기다려주세요! <br/>
 기다리는동안 다음 실습으로 넘어가서 진행해봅시다.
 
-### Step 2.3:  데이터 소스 동기화하고 테스트하기 ✨
+### Step 2.3:  데이터 소스 동기화하기 ✨
 지식 기반이 다 생성되고 나면 아래와 같은 화면을 확인하실 수 있습니다. 마지막으로 데이터 소스에서 방금 생성한 지식 기반을 선택하고 동기화를 클릭해주면 준비는 끝납니다!
 ![u12](./img/u12.png)
 

@@ -4,7 +4,7 @@
 S3에 데이터셋을 업로드하여 구조화된 데이터 검색을 위한 기반을 만들어봅시다.<br/>
 이 데이터셋은 금융 관련 분석에 활용될 중요한 정보를 담고 있습니다.
 
-⚠️ 모든 실습은 us-west-* (오레곤) 지역에서 진행합니다.
+⚠️ 모든 실습은 us-west-2 (오레곤) 지역에서 진행합니다.
 
 ---
 
@@ -88,7 +88,7 @@ b2. `application` 폴더에는 `application.csv` 파일을 업로드합니다.
 모든 과정을 무사히 마쳤을 시, `application` 폴더에는 `application.csv`가 있어야 하며, `credit` 폴더에는 `credit.csv`가 있어야 합니다.  
 
 
-### Step 2: Glue DB 및 Crawler 생성하기 📦  
+### Step 2: Glue DB 및 Crawler 생성하기 🗑️  
 
 [AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Glue를 검색하여 클릭하거나 [Glue 콘솔](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#/v2/getting-started)에 직접 접속합니다.
 
@@ -164,7 +164,7 @@ b4. `Run crawler`를 실행합니다.
 
 ![u30](img/u-g-17.png)
 
-### Step 3: Redshift Workgroup 및 Namespace 생성하기 📦  
+### Step 3: Redshift 생성하기 📂  
 
 [AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Redshift를 검색하여 클릭하거나 [Redshift 콘솔](https://us-west-2.console.aws.amazon.com/redshiftv2/home?region=us-west-2#/landing:)에 직접 접속합니다.
 
@@ -193,7 +193,7 @@ a1. s3 버킷이 접근 가능한 IAM role을 생성합니다.
 ![u35](img/u-r-5.png)   
 
 
-### Step 4: Bedrock Knowledge Base 생성하기 🧠
+### Step 4: Knowledge Base 생성하기 🧠
 
 a. **Structured Knowledge Base를 생성합니다.**  
 
@@ -319,7 +319,7 @@ a. **IAM 권한들을 추가합니다.**
 ![u-i-5](img/u-i-5.png)  
 
 
-### Step 6: Redshift Query Editor v2에서 DB 권한을 부여합니다 🔐  
+### Step 6: Redshift Query Editor v2 🔐  
 
 a. **Redshift Query Editor v2에서 다음 명령어들을 추가하여 권한을 부여합니다.**  
 **이때, IAMR 위치에 본인의 KnowledgeBase IAMR을 추가하면 됩니다.**  
