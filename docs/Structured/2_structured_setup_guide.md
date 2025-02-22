@@ -1,8 +1,14 @@
 # Structured Retrieval 🗃️
 
 ---
+S3에 데이터셋을 업로드하여 구조화된 데이터 검색을 위한 기반을 만들어봅시다.<br/>
+이 데이터셋은 금융 관련 분석에 활용될 중요한 정보를 담고 있습니다.
 
-## 1. [S3] Upload Dataset
+⚠️ 모든 실습은 us-west-* (오레곤) 지역에서 진행합니다.
+
+---
+
+### Step 1: S3에 데이터 업로드하기 📦  
 
 a. **S3 버킷을 생성합니다.**   
 
@@ -75,13 +81,14 @@ b2. `application` 폴더에는 `application.csv` 파일을 업로드합니다.
 
 ![u13](img/u-s3-13.png)
 
-위 과정을 똑같이 `credit` 폴더에 들어가서 `credit.csv` 업로드합니다.
+- 위 과정을 똑같이 `credit` 폴더에 들어가서 `credit.csv` 업로드합니다.   
+
 ![u14](img/u-s3-14.png)
 
 모든 과정을 무사히 마쳤을 시, `application` 폴더에는 `application.csv`가 있어야 하며, `credit` 폴더에는 `credit.csv`가 있어야 합니다.  
 
 
-## 2. [Glue] Create DB, Crawler
+### Step 2: Glue DB 및 Crawler 생성하기 📦  
 
 [AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Glue를 검색하여 클릭하거나 [Glue 콘솔](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#/v2/getting-started)에 직접 접속합니다.
 
@@ -152,10 +159,12 @@ b3. `financecrawler`를 생성합니다.
 
 ![u29](img/u-g-16.png)   
 
-b4. `Run crawler`를 실행합니다.
+b4. `Run crawler`를 실행합니다.   
+
+
 ![u30](img/u-g-17.png)
 
-## 3. [Redshift] Workgroup/Namespace
+### Step 3: Redshift Workgroup 및 Namespace 생성하기 📦  
 
 [AWS 콘솔](https://us-west-2.console.aws.amazon.com/console/home?region=us-west-2) 좌측 상단에 Redshift를 검색하여 클릭하거나 [Redshift 콘솔](https://us-west-2.console.aws.amazon.com/redshiftv2/home?region=us-west-2#/landing:)에 직접 접속합니다.
 
@@ -184,7 +193,7 @@ a1. s3 버킷이 접근 가능한 IAM role을 생성합니다.
 ![u35](img/u-r-5.png)   
 
 
-## 4. [Knowledge Base] Structured KB  
+### Step 4: Bedrock Knowledge Base 생성하기 🧠
 
 a. **Structured Knowledge Base를 생성합니다.**  
 
@@ -241,7 +250,7 @@ a4. **Knowledge Base를 생성합니다.**
 ![u-b-11](img/u-b-11.png)  
 
 
-## 5. [IAM] Role Permissions
+### Step 5: IAM 권한 설정하기 🔑   
 
 a. **IAM 권한들을 추가합니다.**  
 
@@ -310,7 +319,7 @@ a. **IAM 권한들을 추가합니다.**
 ![u-i-5](img/u-i-5.png)  
 
 
-## 6. [Redshift Query Editor v2] DB Permissions
+### Step 6: Redshift Query Editor v2에서 DB 권한을 부여합니다 🔐  
 
 a. **Redshift Query Editor v2에서 다음 명령어들을 추가하여 권한을 부여합니다.**  
 **이때, IAMR 위치에 본인의 KnowledgeBase IAMR을 추가하면 됩니다.**  
@@ -334,7 +343,7 @@ GRANT USAGE ON DATABASE "awsdatacatalog" TO "IAMR:AmazonBedrockExecutionRoleForK
 
 
 
-# Practice
+## Practice 🖋️
 
 위의 설정을 다 완료한 뒤 다음 실습을 진행합니다.  
 
@@ -399,7 +408,7 @@ c. **직접 Description을 추가해 줍니다. (아래 표를 참고해서 작�
 ![u-b-21](img/u-b-21.png) 
 
 
-## Description Script  
+### Description Script  
 
 | Table name         | Column name           | Descriptions                                                                                      |
 |--------------------|-----------------------|---------------------------------------------------------------------------------------------------|
