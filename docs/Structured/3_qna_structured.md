@@ -1,5 +1,7 @@
 # QnA 
 
+---
+
 ## 생성 권한 문제: AccessDeniedException  
 
 다음과 같이 `AccessDeniedException`이 발생할 경우, IAM Permissions에서 권한이 막혀있는 경우입니다. 참가자는 IAM 권한 수정이 불가하기에 다음과 같은 방안을 시도해볼 수 있습니다:
