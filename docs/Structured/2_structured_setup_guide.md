@@ -410,10 +410,9 @@ d. **직접 질문해보며 테스트해봅시다.**
 
 **Description 추가하기 전**: 대답을 정확하게 하지 못하는 것을 확인할 수 있습니다.
 ![u-b-22](img/u-b-22.png) 
-![u-b-23](img/u-b-23.png)
 
 **Description 추가한 후**: 정확하게 대답하는 것을 확인할 수 있습니다.
-![u-b-24](img/u-b-24.png)
+![u-b-23](img/u-b-23.png)
 
 ### Description Script  
 
