@@ -113,7 +113,7 @@ b2. `Create Crawler` 선택합니다.
 
 ![u18](img/u-g-5.png)  
 
-b3. `financecrawler`를 생성합니다.  
+b3. `financecrawler` 를 생성합니다.  
 
 - Crawler 이름을 정의하고 `Next`를 클릭합니다.  
 
@@ -235,11 +235,11 @@ a2-1. Redshift로 돌아가서 Query Data를 선택합니다. 이후, Redshift Q
 
 ![u-b-7](img/u-b-7.png)  
 
-- `external databases`를 펼쳐보시면 `awsdatacatalog` 아래에 본인의 DB가 위치해 있을 것입니다. 실습의 경우에는 이전에 설정했던 Glue DB 명인 `financedb`와 같습니다.  
+- `external databases`를 펼쳐보시면 `awsdatacatalog` 아래에 본인의 DB가 위치해 있을 것입니다. 실습의 경우에는 이전에 설정했던 Glue DB 명인 `financedb` 와 같습니다.  
 
 ![u-b-8](img/u-b-8.png)  
 
-a3. **`Glue catalog tables to connect`에서 `{본인DB}.*`을 작성합니다. 예시의 경우에는 `financedb.*`으로 작성하여, financedb 아래에 있는 모든 테이블을 연결하겠다는 뜻입니다.**  
+a3. **`Glue catalog tables to connect`에서 `{본인DB}.*`을 작성합니다. 예시의 경우에는 `financedb.*` 으로 작성하여, financedb 아래에 있는 모든 테이블을 연결하겠다는 뜻입니다.**  
 
 🔥 **`본인DB에 이전 단계에서 복사해둔 Glue DB를 붙여넣기 해주세요!`** 🔥  
 
