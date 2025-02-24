@@ -37,7 +37,7 @@ b. **제공받은 csv 파일을 업로드합니다.**
 
 ![u4](img/u-s3-4.png)
 
-b1. `application` 폴더와 `credit` 폴더를 각각 생성해 줍니다. 이는 두 개 csv의 스키마 차이를 구분하기 위해서입니다.  
+b1. `application` 폴더와 `credit` 폴더를 각각 생성해 줍니다. 이는 두 개 csv에 대한 각각의 스키마를 생성하기 위함입니다.
 
 - `Create folder`를 클릭합니다.  
 
