@@ -2,13 +2,13 @@
 
 ---
 
-### 실습 시나리오
+## 실습 시나리오
 당신은 빠르게 성장하는 스타트업의 People & Operations 매니저입니다. 최근 회사가 100명 규모로 성장하면서, 매달 늘어나는 신규 입사자들의 사내 규정 문의 응대가 큰 업무 부담이 되고 있습니다. HR팀의 업무 효율을 높이고 직원들이 필요한 정보를 쉽게 찾을 수 있도록, AWS Bedrock Knowledge Base를 활용한 사내 문서 챗봇을 구축해보려 합니다. 이 챗봇을 통해 직원들은 언제든지 사내 규정에 대해 질문하고 즉시 답변을 받을 수 있게 될 것입니다. 지금부터 실제 사내 규정 문서를 업로드하고, Slack과 연동되는 Knowledge Base 챗봇을 만들어보겠습니다.
 
 ---
 
 
-### 아키텍처
+## 아키텍처
 Bedrock Knowledge Bases를 활용한 Slack Chatbot 만들기 실습에서는 먼저 S3 Bucket에 PDF 등의 비정형 데이터를 저장하고, OpenSearch가 이를 인덱싱하여 검색 가능한 형태로 변환합니다. 사용자가 Slack에서 `/ask` 명령어로 질문을 하면, API Gateway를 통해 Lambda Function들이 이를 받아 처리하는데, SlackInitialResponder함수를 통해 '답변이 생성중이다'라는 메세지를 보내고 SlackAIResponder를 호출하게 됩니다. SlackAIResponder는 프롬프트를 Bedrock Knowledge Bases에 전달하여 s3에 저장된 문서들을 기반으로 자연스러운 답변을 생성합니다. 이 과정에서 RAG(Retrieval-Augmented Generation) 방식을 사용하여 정확한 정보를 제공하며, 답변과 함께 참고한 문서의 출처도 함께 Slack으로 반환하여 사용자에게 전달합니다.
 
 ![architecture](img/AUSG_Architecture_fin2.png)
