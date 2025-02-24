@@ -412,21 +412,21 @@ c. **직접 Description을 추가해 줍니다. (아래 표를 참고해서 작�
 
 | Table name         | Column name           | Descriptions                                                                                      |
 |--------------------|-----------------------|---------------------------------------------------------------------------------------------------|
-| awsdatacatalog     | STATUS                | Loan overdue duration: 0: 1-29 days, 1: 30-59 days, 2: 60-89 days, 3: 90-119 days, 4: 120-149 days, 5: Over 150 days, C: paid off that month, X: No loan for the month |
-| awsdatacatalog     | MONTHS_BALANCE        | Record month: The month of the extracted data is the starting point, backwards, 0 is the current month, -1 is the previous month, and so on |
-| awsdatacatalog     | FLAG_OWN_CAR          | Is there a car: 'Y': yes, 'N': no                                                                 |
-| awsdatacatalog     | CODE_GENDER           | Gender: 'M': male, 'F': Female                                                                    |
-| awsdatacatalog     | NAME_FAMILY_STATUS    | Marital status                                                                                    |
-| awsdatacatalog     | DAYS_BIRTH            | Count backwards from current day (0), -1 means yesterday, -365 means 1 year old. (you can get how old is the client by abs(DAYS_BIRTH) / 365) |
-| awsdatacatalog     | FLAG_OWN_REALTY         | Is there a property |
-| awsdatacatalog     | CNT_CHILDREN            | Number of children |
-| awsdatacatalog     | AMT_INCOME_TOTAL            | Annual income |
-| awsdatacatalog     | NAME_INCOME_TYPE            | Income category |
-| awsdatacatalog     | NAME_EDUCATION_TYPE            | Education level |
-| awsdatacatalog     | NAME_HOUSING_TYPE            | Way of living |
-| awsdatacatalog     | FLAG_MOBIL            | Is there a mobile phone |
-| awsdatacatalog     | FLAG_WORK_PHONE            | Is there a work phone |
-| awsdatacatalog     | FLAG_PHONE            | Is there a phone |
-| awsdatacatalog     | FLAG_EMAIL            | Is there an email |
-| awsdatacatalog     | OCCUPATION_TYPE            | Occupation |
-| awsdatacatalog     | CNT_FAM_MEMBERS            | Family size |
+| awsdatacatalog.financedb.credit     | STATUS                | Loan overdue duration: 0: 1-29 days, 1: 30-59 days, 2: 60-89 days, 3: 90-119 days, 4: 120-149 days, 5: Over 150 days, C: paid off that month, X: No loan for the month |
+| awsdatacatalog.financedb.credit     | MONTHS_BALANCE        | Record month: The month of the extracted data is the starting point, backwards, 0 is the current month, -1 is the previous month, and so on |
+| awsdatacatalog.financedb.application     | FLAG_OWN_CAR          | Is there a car: 'Y': yes, 'N': no                                                                 |
+| awsdatacatalog.financedb.application     | CODE_GENDER           | Gender: 'M': male, 'F': Female                                                                    |
+| awsdatacatalog.financedb.application     | NAME_FAMILY_STATUS    | Marital status                                                                                    |
+| awsdatacatalog.financedb.application     | DAYS_BIRTH            | Count backwards from current day (0), -1 means yesterday, -365 means 1 year old. (you can get how old is the client by abs(DAYS_BIRTH) / 365) |
+| awsdatacatalog.financedb.application     | FLAG_OWN_REALTY         | Is there a property |
+| awsdatacatalog.financedb.application     | CNT_CHILDREN            | Number of children |
+| awsdatacatalog.financedb.application     | AMT_INCOME_TOTAL            | Annual income |
+| awsdatacatalog.financedb.application     | NAME_INCOME_TYPE            | Income category |
+| awsdatacatalog.financedb.application     | NAME_EDUCATION_TYPE            | Education level |
+| awsdatacatalog.financedb.application     | NAME_HOUSING_TYPE            | Way of living |
+| awsdatacatalog.financedb.application     | FLAG_MOBIL            | Is there a mobile phone |
+| awsdatacatalog.financedb.application     | FLAG_WORK_PHONE            | Is there a work phone |
+| awsdatacatalog.financedb.application     | FLAG_PHONE            | Is there a phone |
+| awsdatacatalog.financedb.application     | FLAG_EMAIL            | Is there an email |
+| awsdatacatalog.financedb.application     | OCCUPATION_TYPE            | Occupation |
+| awsdatacatalog.financedb.application     | CNT_FAM_MEMBERS            | Family size |
