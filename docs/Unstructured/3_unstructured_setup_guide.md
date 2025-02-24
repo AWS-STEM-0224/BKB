@@ -69,6 +69,9 @@ AWS 콘솔에서 [Lambda(또는 여기를 클릭)](https://us-west-2.console.aws
 ![J6](./img/J6.png)
 
 #### 3.2 코드 입력하기 ⌨️
+
+**SlackAIResponder** 함수는 유저 프롬프트를 Bedrock Knowledge Bases에 전달하여 답변을 생성하기 위한 함수입니다. RetrieveAndGenerate API를 활용한 코드로 구성되어있습니다.
+
 코드 소스 섹션에 다음 코드를 붙여넣어줍니다:
 
 ```
@@ -158,6 +161,9 @@ def lambda_handler(event, context):
 설정을 마친 후 함수 생성을 클릭합니다.
 
 #### 3.6 두 번째 함수 코드 입력하기 📝
+
+**SlackInitialResponder** 함수는 유저가 Slack 명령어를 통해 챗봇에 요청을 보낼때, 유저에게 답변이 생성중이라는 메세지와 더불어 만약 오류가 발생하면 오류가 발생하였다는 메시지를 유저에게 전달하기 위한 람다 함수입니다.
+
 코드 소스 섹션에 다음 코드를 붙여넣어줍니다:
 
 
