@@ -19,7 +19,7 @@
 
 ### Redshift Query Editor v2 권한 관련 오류
 
-실습에서 [다음 명령어들을 추가하여 권한을 부여하는 과정에서](https://stem.awskorea.kr/docs/Structured/structured_setup_guide#6-redshift-query-editor-v2-db-permissions) 본인의 Knowledge Base IAMR에 오타가 발생 했을 가능성이 있습니다.
+실습에서 [다음 명령어들을 추가하여 권한을 부여하는 과정에서](https://bkb.awskorea.kr/docs/Structured/structured_setup_guide#6-redshift-query-editor-v2-db-permissions) 본인의 Knowledge Base IAMR에 오타가 발생 했을 가능성이 있습니다.
 
 예시로, `AmazonBedrockExecutionRoleForKnowledgeBase_abcd1`인 IAMR 대신 `AAmazonBedrockExecutionRoleForKnowledgeBase_abcd11` 등이 추가되어 권한 접근이 안되고 있을 가능성도 있습니다.  
 
@@ -39,7 +39,7 @@ GRANT USAGE ON DATABASE "awsdatacatalog" TO "IAMR:AmazonBedrockExecutionRoleForK
 
 ### IAM Permission  
 
-또한, IAM 권한을 부여하면서 문제가 생겼을 가능성이 있습니다. 저장이 제대로 되지 않았을 가능성도 있으며, 특정 권한이 누락 되었을 수도 있습니다. 이 때문에 [**IAM 설정 관련 부분**](https://stem.awskorea.kr/docs/Structured/structured_setup_guide#5-iam-role-permissions)도 다시 한번 확인해보시는걸 추천드립니다.
+또한, IAM 권한을 부여하면서 문제가 생겼을 가능성이 있습니다. 저장이 제대로 되지 않았을 가능성도 있으며, 특정 권한이 누락 되었을 수도 있습니다. 이 때문에 [**IAM 설정 관련 부분**](https://bkb.awskorea.kr/docs/Structured/structured_setup_guide#5-iam-role-permissions)도 다시 한번 확인해보시는걸 추천드립니다.
 
 
 특히, 다음 권한들이 모두 있는지 확인해주시길 바랍니다.  
@@ -57,7 +57,7 @@ GRANT USAGE ON DATABASE "awsdatacatalog" TO "IAMR:AmazonBedrockExecutionRoleForK
 
 ### Redshift 권한 관련 오류
 
-만약에 다음과 같은 오류가 발생하시면, Redshift부터 권한이 없을 가능성이 존재합니다. 해당 오류는 높은 확률로 `Default Redshift Serverless Namespace`와 `Workgroup`을 생성하시면서 S3 권한을 부여하지 않았기에 발생할 가능성이 높습니다. 해당 문제를 해결하기 위해서는 Namespace와 Workgroup 모두 삭제하시고, 다시 생성하셔야 합니다. 해당 작업은 [**이 부분**](https://stem.awskorea.kr/docs/Structured/structured_setup_guide#3-redshift-workgroupnamespace)을 참고하시면 됩니다. 
+만약에 다음과 같은 오류가 발생하시면, Redshift부터 권한이 없을 가능성이 존재합니다. 해당 오류는 높은 확률로 `Default Redshift Serverless Namespace`와 `Workgroup`을 생성하시면서 S3 권한을 부여하지 않았기에 발생할 가능성이 높습니다. 해당 문제를 해결하기 위해서는 Namespace와 Workgroup 모두 삭제하시고, 다시 생성하셔야 합니다. 해당 작업은 [**이 부분**](https://bkb.awskorea.kr/docs/Structured/structured_setup_guide#3-redshift-workgroupnamespace)을 참고하시면 됩니다. 
 
 ![redshift](img/redshift.jpg)  
 
